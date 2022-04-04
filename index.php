@@ -2,7 +2,7 @@
 
 $greeting = "Ayume Francis";
 
-echo "Hello, {$greeting} ";
+echo "Hello, $greeting";
 
 
 ?>
