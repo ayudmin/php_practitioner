@@ -17,10 +17,8 @@
 <body>
  
         <ul>
-            <?php foreach ($animals as $name) : ?>
-                
-                <li><?= $name;?></li>
-
+            <?php foreach ($person as $feature => $val): ?>
+                <li><strong><?= $feature; ?></strong> <?= $val; ?></li>
             <?php endforeach; ?>
         </ul>
     
