@@ -17,8 +17,8 @@
 <body>
  
         <ul>
-            <?php foreach ($person as $feature => $val): ?>
-                <li><strong><?= $feature; ?></strong> <?= $val; ?></li>
+            <?php foreach ($task as $key => $val): ?>
+                <li><strong><?= $key; ?></strong> <?= $val; ?></li>
             <?php endforeach; ?>
         </ul>
     
