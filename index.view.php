@@ -15,11 +15,22 @@
     </style>
 </head>
 <body>
+
+        <h1>Task for the day</h1>
  
         <ul>
-            <?php foreach ($task as $key => $val): ?>
-                <li><strong><?= $key; ?></strong> <?= $val; ?></li>
-            <?php endforeach; ?>
+            <li>
+                <strong>Name: </strong><?= $task['title'];?>
+            </li>
+            <li>
+                <strong>Due: </strong><?= $task['due'];?>
+            </li>
+            <li>
+                <strong>Status: </strong><?= $task['completed'] ? 'complete' : 'Incomplete'; ?>
+            </li>
+            <li>
+                <strong>Assigned_to: </strong><?= $task['Assigned_to'];?>
+            </li>
         </ul>
     
 </body>

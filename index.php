@@ -3,7 +3,7 @@
 $task = [
     'title' => 'Going to store',
     'due' => 'Today',
-    'completed' => True,
+    'completed' => false,
     'Assigned_to' => 'Mary'
 ];
 
