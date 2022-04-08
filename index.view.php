@@ -26,10 +26,38 @@
                 <strong>Due: </strong><?= $task['due'];?>
             </li>
             <li>
-                <strong>Status: </strong><?= $task['completed'] ? 'complete' : 'Incomplete'; ?>
+                <strong>Status: </strong>
+                
+                <?php if ($task['completed']) : ?>
+
+                    <span class="icon">&#9989;</span>
+
+                <?php else : ?>  
+
+                    <span class="icon">Incomplete</span>
+
+                <?php endif ?>
+                
             </li>
             <li>
                 <strong>Assigned_to: </strong><?= $task['Assigned_to'];?>
+            </li>
+        </ul>
+        <ul>
+            <li>
+
+                <strong>Is_name: </strong>
+
+                <?php if ($male['is_male']) : ?>
+
+                    <span class="icon">You are male</span>
+
+                <?php else : ?>
+
+                    <span class="icon">You are not male</span>
+                
+                <?php endif ?>
+
             </li>
         </ul>
     
