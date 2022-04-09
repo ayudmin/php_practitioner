@@ -1,17 +1,12 @@
 <?php 
 
-$task = [
-    'title' => 'Going to store',
-    'due' => 'Today',
-    'completed' => false,
-    'Assigned_to' => 'Mary'
-];
+
+require 'functions.php';
+
+$animals = ['dog', 'cat'];
 
 
-$male = [
+dd($animals);
 
-    'is_male'=> false,
-
-];
 
 require 'index.view.php';
