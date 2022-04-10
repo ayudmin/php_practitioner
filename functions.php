@@ -13,5 +13,19 @@ function dd($data){
 }
 
 
+function is_allowed($age){
+
+    if ($age > 21){
+
+        return true;
+
+    } else{
+        
+        return false;
+    }
+
+}
+
+
 
 ?>
