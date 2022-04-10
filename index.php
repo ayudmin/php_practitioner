@@ -3,20 +3,29 @@
 
 require 'functions.php';
 
-$animals = ['dog', 'cat'];
+class Task {
 
-$person_age = 25;
+    protected $description;
 
-if (is_allowed($person_age)){
-    
-    echo 'You are old enough to enter';
-} else {
+    protected $completed = false;
 
-    echo 'You are under age';
+    public function __construct($description)
+
+    {
+        $this->description = $description;
+
+    }
+
+    public function isComplete()
+
+    {
+        return $this->completed;
+    }
+
 }
 
+$task = new Task('Go surfing');
 
-dd($animals);
-
+dd($task->isComplete());
 
 require 'index.view.php';
