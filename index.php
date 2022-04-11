@@ -1,18 +1,26 @@
 <?php 
 
 
-require 'functions.php';
 
 class Task {
 
-    protected $description;
+    public $description;
 
-    protected $completed = false;
+    public $completed = false;
 
     public function __construct($description)
 
     {
         $this->description = $description;
+
+    }
+
+
+    public function complete()
+
+    {
+
+        $this->completed = true;
 
     }
 
@@ -24,8 +32,17 @@ class Task {
 
 }
 
-$task = new Task('Go surfing');
+$tasks = [
 
-dd($task->isComplete());
+    new Task('Go surfing'),
+
+    new Task('Finish my screencast'),
+
+    new Task('Clean my room')
+];
+
+
+$tasks[0]->complete();
+
 
 require 'index.view.php';

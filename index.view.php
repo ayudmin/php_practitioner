@@ -15,51 +15,26 @@
     </style>
 </head>
 <body>
-
-        <h1>Task for the day</h1>
- 
         <ul>
-            <li>
-                <strong>Name: </strong><?= $task['title'];?>
-            </li>
-            <li>
-                <strong>Due: </strong><?= $task['due'];?>
-            </li>
-            <li>
-                <strong>Status: </strong>
-                
-                <?php if ($task['completed']) : ?>
 
-                    <span class="icon">&#9989;</span>
+            <?php foreach ($tasks as $task) : ?>
 
-                <?php else : ?>  
+                <li>
+                    <?php if ($task->completed) : ?>
 
-                    <span class="icon">Incomplete</span>
+                        <strike><?= $task->description; ?></strike>
 
-                <?php endif ?>
-                
-            </li>
-            <li>
-                <strong>Assigned_to: </strong><?= $task['Assigned_to'];?>
-            </li>
+                    <?php else : ?>
+
+                        <?= $task->description; ?>
+
+                    <?php endif; ?>
+                </li>
+
+            <?php endforeach; ?>
+
         </ul>
-        <ul>
-            <li>
+       
 
-                <strong>Is_name: </strong>
-
-                <?php if ($male['is_male']) : ?>
-
-                    <span class="icon">You are male</span>
-
-                <?php else : ?>
-
-                    <span class="icon">You are not male</span>
-                
-                <?php endif ?>
-
-            </li>
-        </ul>
-    
 </body>
 </html>
