@@ -1,50 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Php Learning</title>
+<?php require('partials/head.php')?>
 
-    <style>
-        header {
-            background: #e3e3e3;
-            padding: 2em;
-            text-align: center
-        }
-    </style>
-</head>
-<body>
 
-    <nav>
-        <ul>
-            <li><a href="/about">About Page</a></li>
-            <li><a href="/contact">Contact Page</a></li>
-        </ul>
-    </nav>
+<h1>My Tasks</h1>
 
-    <h1>My Tasks</h1>
+    <?php foreach ($tasks as $task) : ?>
 
-    <ul>
+        <li>
+            <?php if ($task->completed) : ?>
 
-        <?php foreach ($tasks as $task) : ?>
+                <strike><?= $task->description; ?></strike>
 
-            <li>
-                <?php if ($task->completed) : ?>
+            <?php else : ?>
 
-                    <strike><?= $task->description; ?></strike>
+                <?= $task->description; ?>
 
-                <?php else : ?>
+            <?php endif; ?>
+        </li>
 
-                    <?= $task->description; ?>
+    <?php endforeach; ?>
 
-                <?php endif; ?>
-            </li>
 
-        <?php endforeach; ?>
-
-    </ul>
-       
-
-</body>
-</html>
+<?php require('partials/footer.php'); ?>
