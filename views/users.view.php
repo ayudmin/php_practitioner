@@ -1,23 +1,23 @@
 <?php require('partials/head.php')?>
 
-<h1>Home Page</h1>
+<h1>All users</h1>
 
-<!-- <?php foreach ($users as $user) : ?>
+<?php foreach ($users as $user) : ?>
 
     <li><?= $user->name; ?></li>
 
-<?php endforeach; ?> -->
+<?php endforeach; ?>
 
-<!-- 
+
 <h1>Submit form</h1>
 
-<form action="/names" method="POST">
+<form action="/users" method="POST">
 
     <input type="text" name="name">
     <button type="submit">submit</button>
 
 
-</form> -->
+</form>
 
 
 
