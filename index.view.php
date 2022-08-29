@@ -16,13 +16,19 @@
 </head>
 <body>
 
+    <h1>Task for Today</h1>
+
     <ul>
         
-        <?php foreach ($person as $feature => $value ) : ?>
-
-            <li><strong> <b><?= $feature ?></b> </strong> <i><?= $value; ?></i></li>
-
-        <?php endforeach; ?>
+        <li>
+            <strong>Name:</strong> <?= $todos['title'] ?>
+        </li>
+        <li>
+            <strong>Assigned:</strong> <?= $todos['assigned_to'] ?>
+        </li>
+        <li>
+            <strong>Status:</strong> <?= $todos['completed'] ? 'completed' : 'pending' ?>
+        </li>
 
     </ul>
 
