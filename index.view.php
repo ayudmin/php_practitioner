@@ -16,11 +16,15 @@
 </head>
 <body>
 
-    <header>
-        <h1>
-            <?= $greeting; ?>
-        </h1>
-    </header>
+    <ul>
+
+        <?php  foreach ($animals as $animal) : ?>
+
+            <li><?= $animal; ?></li>
+
+        <?php endforeach; ?>
+
+    </ul>
 
 </body>
 </html>
