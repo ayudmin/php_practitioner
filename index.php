@@ -1,12 +1,26 @@
 <?php
 
+require 'functions.php';
 
-$todos = [
+$animals = ['Dog', 'Cat'];
 
-	'title' => 'Going to work',
-	'assigned_to' => 'Francis',
-	'status' => false
-];
 
+
+// dumper($animals);
+
+
+$client1_age = 25;
+
+$client2_age = 15;
+
+if (age_validate($client2_age)){
+
+	echo 'Allowed to enter';
+
+} else {
+
+	echo 'Under age';
+
+}
 
 require 'index.view.php';
