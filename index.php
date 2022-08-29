@@ -5,7 +5,7 @@ $todos = [
 
 	'title' => 'Going to work',
 	'assigned_to' => 'Francis',
-	'completed' => false
+	'status' => false
 ];
 
 

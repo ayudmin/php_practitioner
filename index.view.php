@@ -21,13 +21,30 @@
     <ul>
         
         <li>
+
             <strong>Name:</strong> <?= $todos['title'] ?>
+
         </li>
+
         <li>
+
             <strong>Assigned:</strong> <?= $todos['assigned_to'] ?>
+
         </li>
+
         <li>
-            <strong>Status:</strong> <?= $todos['completed'] ? 'completed' : 'pending' ?>
+            <strong>Status:</strong>
+
+             <?php if ($todos['status']) : ?>
+
+                <span class="icon">&#10004;</span>
+
+            <?php else : ?>
+
+                <span class="icon">&#33;</span>
+
+            <?php endif ; ?>
+
         </li>
 
     </ul>
