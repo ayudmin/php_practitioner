@@ -1,18 +1,14 @@
 <?php
 
 
-$animals = [
+$todos = [
 
-	'Dog',
-
-	'Lion',
-
-	'Girrafe',
-
-	'Cheetah',
-
-	'Kob'
-
+	'title' => 'Going to work',
+	'assigned_to' => 'Francis',
+	'completed' => 'Yes'
 ];
 
-require 'index.view.php';
+
+var_dump($todos);
+
+// require 'index.view.php';

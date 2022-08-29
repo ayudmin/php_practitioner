@@ -17,10 +17,10 @@
 <body>
 
     <ul>
+        
+        <?php foreach ($person as $feature => $value ) : ?>
 
-        <?php  foreach ($animals as $animal) : ?>
-
-            <li><?= $animal; ?></li>
+            <li><strong> <b><?= $feature ?></b> </strong> <i><?= $value; ?></i></li>
 
         <?php endforeach; ?>
 
